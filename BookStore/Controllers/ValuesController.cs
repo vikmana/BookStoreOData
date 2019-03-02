@@ -9,7 +9,7 @@ namespace BookStore.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ODataController
+    public class ValuesController : ControllerBase
     {
         // GET api/values
         [HttpGet]

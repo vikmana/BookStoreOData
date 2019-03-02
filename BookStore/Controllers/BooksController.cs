@@ -6,11 +6,13 @@ using BookStore.Models;
 using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace BookStore.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]")] 
     [ApiController]
+    [ApiExplorerSettings(IgnoreApi = false)]
     public class BooksController : ODataController
     {
         private BookStoreContext _db;
