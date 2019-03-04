@@ -77,7 +77,7 @@ namespace BookStore
             app.UseMvc(b =>
             {
                 b.Select().Expand().Filter().OrderBy().MaxTop(int.MaxValue).Count();
-                b.MapODataServiceRoute("odata", "api", GetEdmModel());
+                b.MapODataServiceRoute("odataroute", "odata", GetEdmModel());
                 b.EnableDependencyInjection();
             });
         }

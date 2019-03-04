@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using BookStore.Models;
 
 public static class DataSource
@@ -49,6 +50,22 @@ public static class DataSource
             }
         };
         _books.Add(book);
+
+        for (var id = 3; id < 20; id++)
+        {
+            _books.Add(new Book
+            {
+                Id = id,
+                ISBN = Guid.NewGuid().ToString(),
+                Title =$"Title_{id}",
+                Press = new Press
+                {
+                    Id = 2,
+                    Name = $"Name_{id}",
+                    Category = Category.EBook,
+                }
+            });
+        }
 
         return _books;
     }

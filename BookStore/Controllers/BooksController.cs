@@ -31,7 +31,7 @@ namespace BookStore.Controllers
         }
 
         [HttpGet]
-        [EnableQuery]
+        [EnableQuery(PageSize = 5)]
         public IActionResult Get()
         {
             return Ok(_db.Books);
